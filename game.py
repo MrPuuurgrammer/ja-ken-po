@@ -1,6 +1,7 @@
 import random
 
 OPCOES = ["pedra", "papel", "tesoura"]
+EMOJIS = {"pedra": "✊", "papel": "✋", "tesoura": "✌️"}
 
 
 def vencedor(jogador, computador):
@@ -24,8 +25,8 @@ def jogar():
         return
 
     computador = random.choice(OPCOES)
-    print(f"Você: {jogador}")
-    print(f"Computador: {computador}")
+    print(f"Você: {jogador}  {EMOJIS[jogador]}")
+    print(f"Computador: {computador} {EMOJIS[computador]}")
 
     resultado = vencedor(jogador, computador)
     if resultado == "empate":
